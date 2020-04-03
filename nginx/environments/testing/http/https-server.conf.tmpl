@@ -1,0 +1,30 @@
+##
+# This server block allows us to test the site using https
+# We always use https in production and this a easy way to check for mixed content
+##
+server {
+    listen 443 ssl http2 default;
+    server_name _;
+
+    # Use ssl
+    # These need to be generated in .drone.yml with openssl
+    ssl on;
+    ssl_certificate         ${__DIR__}/default.crt;
+    ssl_certificate_key     ${__DIR__}/default.key;
+    ssl_trusted_certificate ${__DIR__}/default.crt;
+
+    # Proxy all requests to the Drone application.
+    location / {
+        access_log off;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host $http_host;
+
+        proxy_pass http://127.0.0.1:${PORT};
+        proxy_http_version 1.1;
+        proxy_buffering off;
+
+        chunked_transfer_encoding off;
+    }
+}
