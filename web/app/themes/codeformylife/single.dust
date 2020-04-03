@@ -1,0 +1,22 @@
+{>"shared/header" /}
+
+{! Open the Single context !}
+{#Single}
+
+    <div class="main-content">
+        {! Open the Content context !}
+        {#Content}
+        <div class="main-content__hero">
+            <h1 class="hero__heading">{post_title}</h1>
+            <div class="hero__content">
+                {@content /}
+            </div>
+        </div>
+        {/Content}
+        {! End the Content context !}
+    </div>
+
+{/Single}
+{! End the Single context !}
+
+{>"shared/footer" /}

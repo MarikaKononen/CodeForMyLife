@@ -1,0 +1,28 @@
+{
+    "author": "Geniem Oy",
+    "dependencies": {},
+    "description": "DustPress JavaScript library. Provides a front-end interface for interacting with the backend functions.",
+    "devDependencies": {
+        "@babel/core": "^7.7.2",
+        "@babel/plugin-proposal-class-properties": "^7.7.0",
+        "@babel/preset-env": "^7.7.1",
+        "babel-eslint": "^10.0.3",
+        "babel-loader": "^8.0.6",
+        "core-js": "^2.6.10",
+        "js-cookie": "^2.2.1",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10",
+        "whatwg-fetch": "^3.0.0"
+    },
+    "license": "GPL-3.0",
+    "name": "dustpress-js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/devgeniem/dustpress-js.git"
+    },
+    "scripts": {
+        "build": "webpack -p",
+        "watch": "webpack -w"
+    },
+    "version": "4.2.0"
+}

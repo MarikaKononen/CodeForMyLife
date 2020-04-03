@@ -1,0 +1,3 @@
+{#posts}
+    {>"shared/post-list-item"/}
+{/posts}

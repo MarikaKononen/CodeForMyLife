@@ -1,0 +1,41 @@
+{>"shared/header" /}
+
+{! Open the Index context !}
+{#Index}
+
+    <div class="main-content">
+        {! Open the Page context !}
+        {#Page}
+        <div class="main-content__hero">
+            <h1 class="hero__heading">{post_title}</h1>
+            <div class="hero__content">
+                {@content /}
+            </div>
+        </div>
+        {/Page}
+        {! End the Page context !}
+
+        {! Open the Query context !}
+        {#Query}
+        <div class="main-content__posts">
+            <h2>Recent posts</h2>
+            <ul class="posts__list">
+                {! Loop through the queried posts !}
+                {#posts}
+                    <li class="posts_list-item"><a href="{permalink}">{post_title}</a></li>
+                {/posts}
+            </ul>
+            {! Display the post count and an archive link !}
+            <div class="posts__info">
+                <p>There a total of <span class="posts__count-text">{found_posts}</span> posts.</p>
+                <p><a href="/archive">See all posts</a></p>
+            </div>
+        </div>
+        {/Query}
+        {! End the Query context !}
+    </div>
+
+{/Index}
+{! End the Index context !}
+
+{>"shared/footer" /}

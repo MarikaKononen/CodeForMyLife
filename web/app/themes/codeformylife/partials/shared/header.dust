@@ -1,0 +1,26 @@
+<!doctype html>
+<html {WP.LanguageAttributes}>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{WP.name}</title>
+
+    {@wphead /}
+</head>
+
+<body class="{#WP.body_class}{.}{@sep} {/sep}{/WP.body_class}">
+
+<div class="top-bar">
+    <div class="top-bar-left">
+        <ul class="menu">
+            <li class="menu-text"><a href="{WP.url}">{WP.name}</a></li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        {@menu menu_name="primary_navigation" ul_id="primary-menu" ul_classes="menu primary-menu" show_submenu=false /}
+    </div>
+</div>
+
+<div class="main-container">

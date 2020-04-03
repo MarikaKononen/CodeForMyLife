@@ -1,0 +1,22 @@
+{
+  "name": "devgeniem/wp-define-more",
+  "type": "wordpress-muplugin",
+  "license": "GPL-2.0",
+  "description": "Adds useful definable constants which are missing from the WP Core.",
+  "homepage": "https://github.com/devgeniem/wp-define-more",
+  "authors": [
+    {
+      "name": "Onni Hakala",
+      "email": "onni.hakala@geniem.com",
+      "homepage": "https://github.com/onnimonni",
+      "role": "Developer"
+    }
+  ],
+  "keywords": [
+    "wordpress", "wp", "options", "define", "uploads", "max", "filesize"
+  ],
+  "require": {
+    "php": ">=5.3",
+    "composer/installers": "^v1.0.12"
+  }
+}
