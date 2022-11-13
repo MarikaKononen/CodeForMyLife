@@ -11,7 +11,7 @@
         "core-js": "^2.6.10",
         "js-cookie": "^2.2.1",
         "webpack": "^4.41.2",
-        "webpack-cli": "^3.3.10",
+        "webpack-cli": "^3.3.12",
         "whatwg-fetch": "^3.0.0"
     },
     "license": "GPL-3.0",
